@@ -1,0 +1,26 @@
+openapi: '3.0.3'
+info:
+  title: Prime numbers API
+  version: '1.0'
+servers:
+  - url: http://localhost:8085/api/v1
+paths:
+  /prime-numbers/{inputNumber}:
+    get:
+      tags:
+        - Basic API
+      description: Returns an array with the prime numbers in descending form according to the indicated number
+      parameters:
+        - in: path
+          name: inputNumber
+          schema:
+            type: integer
+            minimum: 2
+            maximum: 100000
+          required: true
+          description: Integer number greater than or equal to 2 (limited to 100000 maximum)
+      responses:
+        '200':
+          description: OK
+        '500':
+          description: Internal Server Error

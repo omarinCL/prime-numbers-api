@@ -1,0 +1,7 @@
+{
+  "extension": ["ts"],
+  "timeout": 60000,
+  "full-trace": true,
+  "require": ["ts-node/register/transpile-only", "source-map-support/register"],
+  "recursive": true
+}
