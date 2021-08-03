@@ -1,10 +1,10 @@
 export const getPrimeNumbersService = (inputNumber: number) => {
-  const accumulator = [];
+  const list = [];
   while (inputNumber > 0) {
-    if (isPrimeNumber(inputNumber)) accumulator.push(inputNumber);
+    if (isPrimeNumber(inputNumber)) list.push(inputNumber);
     inputNumber--;
   }
-  return accumulator;
+  return list.join();
 };
 
 export const isPrimeNumber = (inputNumber: number) => {
